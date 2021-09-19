@@ -1,0 +1,6 @@
+.json
+--Directory Traversal.runtimeconfig.dev.json - 1kb
+--Directory Traversal.runtimeconfig.json - 1kb
+.dll
+.exe
+.pdb
