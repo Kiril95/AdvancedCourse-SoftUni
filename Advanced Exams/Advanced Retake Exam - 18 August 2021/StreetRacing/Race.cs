@@ -61,10 +61,10 @@ namespace StreetRacing
 
         public Car GetMostPowerfulCar()
         {
-            var mostHP = Participants.Select(x => x.HorsePower).Max();
-            var topCar = Participants.FirstOrDefault(x => x.HorsePower == mostHP);
             if (Participants.Count > 0)
             {
+                var mostHP = Participants.Select(x => x.HorsePower).Max();
+                var topCar = Participants.FirstOrDefault(x => x.HorsePower == mostHP);
                 return topCar;
             }
 
@@ -77,13 +77,9 @@ namespace StreetRacing
 
             foreach (var car in this.Participants)
             {
-                sb.AppendLine($"Make: {car.Make}")
-                    .AppendLine($"Model: {car.Model}")
-                    .AppendLine($"License Plate: {car.LicensePlate}")
-                    .AppendLine($"Horse Power: {car.HorsePower}")
-                    .AppendLine($"Weight: {car.Weight}");
+                sb.AppendLine(car.ToString());
             }
-            return sb.ToString().Trim();
+            return sb.ToString().TrimEnd();
         }
 
     }

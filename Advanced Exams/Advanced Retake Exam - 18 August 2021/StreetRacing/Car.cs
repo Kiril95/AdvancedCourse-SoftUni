@@ -34,7 +34,7 @@ namespace StreetRacing
                 .AppendLine($"Horse Power: {HorsePower}")
                 .AppendLine($"Weight: {Weight}");
 
-            return builder.ToString().Trim();
+            return builder.ToString().TrimEnd();
         }
     }
 }
