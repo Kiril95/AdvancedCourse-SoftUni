@@ -62,14 +62,9 @@ namespace Guild
         {
             Player[] targetPlayers = Roster.Where(x => x.Class == @class).ToArray();
 
-            for (int i = 0; i < targetPlayers.Length; i++)
+            foreach (var target in targetPlayers)
             {
-                if (Roster.Any(x => x.Class == @class))
-                {
-                    var target = Roster.Find(x => x.Class == @class);
-                    targetPlayers[i] = target;
-                    Roster.Remove(target);
-                }
+                Roster.Remove(target);
             }
 
             return targetPlayers;
