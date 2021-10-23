@@ -75,14 +75,12 @@ namespace Pawn_Wars
 
                 if (whiteRow == 0)
                 {
-                    char col = ChessCol(whiteCol);
-                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {col}8.");
+                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {ChessCol(whiteCol)}8.");
                     break;
                 }
                 if (blackRow == 7)
                 {
-                    char col = ChessCol(blackCol);
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {col}1.");
+                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {ChessCol(blackCol)}1.");
                     break;
                 }
                 count++;
